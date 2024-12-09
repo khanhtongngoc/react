@@ -9,13 +9,23 @@ class MyComponent extends React.Component {
         console.log(">>Click Me my button")
         // console.log("random", )
         this.setState({
-            name: "Trang"
-        })
-        this.setState({
+            name: "Trang",
             age: Math.floor((Math.random() * 100) + 1)
         })
+        // this.setState({
+        //     age: Math.floor((Math.random() * 100) + 1)
+        // })
     }
+    handleOnChange = (event) => {
+        this.setState({
+            name: event.target.value
+        })
 
+    }
+    handleOnSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state)
+    }
     handleOnMoverOver(event) {
         console.log(event);
     }
@@ -23,8 +33,14 @@ class MyComponent extends React.Component {
     render() {
         return (
             <div> My name is {this.state.name} and I'm {this.state.age}
-                <button onMouseOver={this.handleOnMoverOver}> Hover Me</button>
                 <button onClick={(event) => { this.handleClick(event) }}> Click me</button>
+                <form onSubmit={(event) => this.handleOnSubmit(event)}>
+                    <input type="text"
+                        onChange={(event) => this.handleOnChange(event)}
+                    />
+                    <button>Submit</button>
+                </form>
+
             </div>
         );
     }
