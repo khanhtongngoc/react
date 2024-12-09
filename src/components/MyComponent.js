@@ -18,7 +18,7 @@ class MyComponent extends React.Component {
     render() {
 
         return (
-            <div>
+            <>
                 <AddUserInfor
                     handleAddNewUser={this.handleAddNewUser}
                 />
@@ -26,7 +26,7 @@ class MyComponent extends React.Component {
                 <DisplayInfor
                     listUsers={this.state.listUsers}
                 />
-            </div>
+            </>
         );
     }
 }
