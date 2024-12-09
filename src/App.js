@@ -13,7 +13,7 @@ class App extends React.Component {
         Hello World Với Tống Ngọc Khánh
         <MyComponent></MyComponent>
       </div>
-    )
+    );
   }
 }
 // const App = () => {
