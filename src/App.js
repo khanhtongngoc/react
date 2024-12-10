@@ -1,9 +1,7 @@
-import logo from './logo.svg';
+
 import './App.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
-import MyComponent from './components/MyComponent';
-import React from 'react';
+import Header from './components/Header/header';
+
 
 
 // class App extends React.Component {
@@ -17,15 +15,13 @@ import React from 'react';
 //   }
 // }
 const App = () => {
-  const count = useSelector(state => state.counter.count);
-  const dispatch = useDispatch();
 
   return (
-    <div className="App-container">
-      Hello world
+    <div className="app-container">
+      <Header />
     </div>
 
-  );
+  )
 }
 
 export default App;
