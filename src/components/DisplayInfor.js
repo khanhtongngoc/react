@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { use } from "react";
 import './DisplayInfor.scss';
 import logo from './../logo.svg';
@@ -41,6 +41,14 @@ const DisplayInfor = (props) => {
     const handleShowHideListUser = () => {
         setShowHideListUser(!isShowHideListUser);
     }
+    useEffect(
+        () => {
+            if (listUsers.length === 0) {
+                alert("xoa het roi");
+            }
+            console.log('>>call me');
+        }, [listUsers]
+    )
     return (
         <div className="display-infor-container">
             <div>
