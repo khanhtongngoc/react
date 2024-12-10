@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { use } from "react";
 import './DisplayInfor.scss';
 import logo from './../logo.svg';
+import userEvent from "@testing-library/user-event";
 
 // class DisplayInfor extends React.Component {
 
