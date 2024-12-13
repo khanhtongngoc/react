@@ -4,7 +4,7 @@ const HomePage = (props) => {
         <div className='container'>
             <div className="homepage-container">
                 {/* {loop autoplay playsinline="" x-webkit-airplay="deny" muted} */}
-                <div className='homepage-video'>
+                <div>
                     <video autoPlay loop muted>
                         <source
                             src={videoHomepage}
